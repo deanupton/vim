@@ -1,0 +1,98 @@
+========VIM NOTES=========
+
+<ESC> - Return to normal mode (i.e after inserting)
+
+|FILES| |COMMANDS|
+
+FILES
+:q! - quit and trash any changes
+:w - write changes to disk
+:wq - write changes and quit (also ZZ)
+:e [file] - open [file] in vim for editing
+`0 - return to where you were last time you were in vim
+>vim [file] - (In Terminal) open vim and start editing [file]. Creates [file] if it doesn't exist already.
+
+COMMAND (use [cmd][count][motion])
+i - insert text before cursor.
+I - insert text at start of line.
+a - append text after cursor.
+A - append text at end of line.
+o - open line below and insert.
+O - open line above and insert.
+u - undo last
+U - undo line
+ctrl-r - redo
+d - delete
+dd - delete line (2dd - delete 2 lines)
+daw - delete a word
+c - change
+cc - change line
+caw - change a word
+y - yank
+yy - yank line
+r[x] - replace char at cursor with 'x'
+p - put last reg item after cursor
+
+MOTION
+w - start of  word.
+e - end of line.
+$ - end of line.
+b - go back a word
+0 - start of line
+
+MOVING THE CURSOR
+( - sentence back
+) - sentence forward
+{ - paragraph back
+} - paragraph forward
+]] - section forward (or to next '{')
+[[ - section backward (or to previous '{')
+G - move to bottom of file
+gg - move to top of file
+ctrl-g - show position in file
+[number]G - go to line [number]
+ctrl-o - go back to last cursor position.
+ctrl-i - opposite direction las cursor posititon.
+v - visual mode
+V - visual mode lines
+f[char] - find the next instance of [char] on current line (';' repeats it)
+F[char] - find the previous instance of [char] on current line (';' repeats it)
+zz - move screen so cursor is in center
+zt - move screen so cursor is at top
+zb - move screen so cursor is at bottom
+
+SEARCH
+/the - search for 'the'
+n - search forward for next instance of current search 
+N - search backwards for current search term
+:set ic - set search to ignore case
+:set noic - disable ignore case.
+
+REPLACE
+:s/old/new - substitute new for first old in line
+:s/old/new/g - substitute all on line
+:%s/old/new/g - substitute all in file
+:%s/old/new/gc - substitute all in file with conformation
+ 
+COMPLETION
+ctrl-d to find completions (incl. file names)
+<TAB> to complete
+
+HELP
+:help
+ctrl-ww to jump between windows
+~/Code/vim/vimnotes2.txt
+
+MARKDOWN
+:%! /usr/local/bin/Markdown.pl
+current user command - MD
+(should be able to make a shortcut command for this in .vimrc)
+
+APPEARANCE
+:set number - show line numbers (:set nonumber to disable)
+:set ruler - show current position at btm of screen (:set noruler to disable)
+:syntax on - syntax coloring
+:set linebreak - wraps lines on screen respecting words
+
+MISC GOODIES
+:scriptnames - show which scripts have been loaded
