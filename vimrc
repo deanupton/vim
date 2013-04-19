@@ -5,6 +5,7 @@
 :map <F10> I<CR>###<Esc>	"<h3>
 :map <F9> I*<Esc>A*<Esc>	"<i>
 :map <F8> I**<Esc>A**<Esc>	"<b>
+:map <F7> I!<Esc>		"just to test
 
 
 "Default Appearance
