@@ -13,9 +13,19 @@
 :set linebreak
 :set ruler
 :syntax on
+:set hlsearch
 
 "Custom Commands
 "==================
-command Evimrc		:edit ~/.vimrc
-command Evimnotes	:edit ~/Code/vim/vimnotes.txt
-command MD 		:%! /usr/local/bin/Markdown.pl
+"(NOTE:These get set when starting vim... if I update .vimrc it tries to reset them and gives an error as they already exist)
+"command Evimrc		:edit ~/.vimrc
+"command Evimnotes	:edit ~/Code/vim/vimnotes.txt
+"command MD 		:%! /usr/local/bin/Markdown.pl
+
+" Source the vimrc file after saving it
+if has("autocmd")
+  autocmd bufwritepost .vimrc source $MYVIMRC
+endif
+
+let mapleader = ","
+nmap <leader>v :tabedit $MYVIMRC<CR>

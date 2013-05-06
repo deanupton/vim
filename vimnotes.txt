@@ -1,15 +1,13 @@
-========VIM NOTES=========
+=======VIM NOTES=========
 
 <ESC> - Return to normal mode (i.e after inserting)
-
-|FILES| |COMMANDS|
 
 FILES
 :q! - quit and trash any changes
 :w - write changes to disk
 :wq - write changes and quit (also ZZ)
 :e [file] - open [file] in vim for editing
-`0 - return to where you were last time you were in vim
+`0 - return to where you were last time you were in vim (This is first mark)
 >vim [file] - (In Terminal) open vim and start editing [file]. Creates [file] if it doesn't exist already.
 
 COMMAND (use [cmd][count][motion])
@@ -63,10 +61,13 @@ zb - move screen so cursor is at bottom
 
 SEARCH
 /the - search for 'the'
+* - search for the word currently under the cursor
 n - search forward for next instance of current search 
 N - search backwards for current search term
 :set ic - set search to ignore case
 :set noic - disable ignore case.
+:set hlsearch - search highlighting on
+:set nohlsearch - search highlighting off
 
 REPLACE
 :s/old/new - substitute new for first old in line
@@ -74,14 +75,19 @@ REPLACE
 :%s/old/new/g - substitute all in file
 :%s/old/new/gc - substitute all in file with conformation
  
+BUFFERS
+:ls - list current buffers
+:b3 - show buffer 3
+
 COMPLETION
+ctrl-n autocomplete in insert mode
 ctrl-d to find completions (incl. file names)
 <TAB> to complete
 
 HELP
 :help
 ctrl-ww to jump between windows
-~/Code/vim/vimnotes2.txt
+ctrl-w(jkhl) to move between windows
 
 MARKDOWN
 :%! /usr/local/bin/Markdown.pl
