@@ -29,3 +29,4 @@ endif
 
 let mapleader = ","
 nmap <leader>v :tabedit $MYVIMRC<CR>
+nmap <leader>n :tabedit ~/Code/vim/vimnotes.txt<CR>
